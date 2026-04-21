@@ -14,7 +14,7 @@ FORCE_SUB_CHANNEL_LINK = environ.get("FORCE_SUB_CHANNEL_LINK", "https://t.me/gkf
 ADMINS = list(map(int, environ.get("6320092636", "").split()))
 
 # Optional: Bot Owner ID
-OWNER_ID = int(environ.get("7660916897", ""))
+OWNER_ID = environ.get("7660916897", "")
 
 # Database URL (if you want to add database support later)
 DATABASE_URL = environ.get("DATABASE_URL", "")
