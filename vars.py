@@ -11,7 +11,7 @@ FORCE_SUB_CHANNEL = environ.get("FORCE_SUB_CHANNEL", "gkfjldlkfvoifg")  # Channe
 FORCE_SUB_CHANNEL_LINK = environ.get("FORCE_SUB_CHANNEL_LINK", "https://t.me/gkfjldlkfvoifg")  # Channel link
 
 # Admin Configuration
-ADMINS = list(map(int, environ.get("7660916897", "").split()))
+ADMINS = list(map(int, environ.get("6320092636", "").split()))
 
 # Optional: Bot Owner ID
 OWNER_ID = int(environ.get("7660916897", ""))
