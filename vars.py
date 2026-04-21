@@ -2,9 +2,9 @@
 
 from os import environ
 
-API_ID    = int(os.environ.get("API_ID", ""))
-API_HASH  = os.environ.get("API_HASH", "")
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
+API_ID    = int(environ.get("API_ID", ""))
+API_HASH  = environ.get("API_HASH", "")
+BOT_TOKEN = environ.get("BOT_TOKEN", "") 
 
 # Force Subscribe Configuration
 FORCE_SUB_CHANNEL = environ.get("FORCE_SUB_CHANNEL", "gkfjldlkfvoifg")  # Channel username without @, 
