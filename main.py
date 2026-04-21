@@ -26,11 +26,13 @@ from pyrogram.types.messages_and_media import message
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from pyrogram.enums import ParseMode, ChatMemberStatus
 
+# Initialize the bot
 bot = Client(
     "bot",
     api_id=API_ID,
     api_hash=API_HASH,
-    bot_token=BOT_TOKEN)
+    bot_token=BOT_TOKEN
+)
 
 # Welcome image file path
 WELCOME_IMAGE_PATH = "welcome.jpg"
