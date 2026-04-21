@@ -54,24 +54,11 @@ async def is_subscribed(bot, user_id):
         print(f"Error checking subscription: {e}")
         return False
 
-# Force Subscribe Decorator
+# Updated Decorator to Bypass Join Check
 def force_subscribe(func):
     async def wrapper(bot, message):
-        if FORCE_SUB_CHANNEL:
-            is_sub = await is_subscribed(bot, message.from_user.id)
-            if not is_sub:
-                keyboard = InlineKeyboardMarkup([
-                    [InlineKeyboardButton("🔔 Join Channel", url="https://t.me/roxybasicneedbot1")],
-                    [InlineKeyboardButton("🔄 Refresh", callback_data="refresh_sub")]
-                ])
-                await message.reply_text(
-                    f"<b>🔒 Access Denied!</b>\n\n"
-                    f"You must join our channel to use this bot.\n\n"
-                    f"👇 Click the button below to join:",
-                    reply_markup=keyboard,
-                    parse_mode=ParseMode.HTML
-                )
-                return
+        # यहाँ हमने "is_subscribed" चेक हटा दिया है
+        # अब बॉट सीधा आपका फंक्शन (func) चलाएगा
         await func(bot, message)
     return wrapper
 
